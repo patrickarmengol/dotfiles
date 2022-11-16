@@ -1,0 +1,32 @@
+{
+    // window
+    "window.zoomLevel": 1,
+    "window.menuBarVisibility": "toggle",
+
+    // theme
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "catppuccin.boldKeywords": false,
+    "catppuccin.italicComments": false,
+    "catppuccin.italicKeywords": false,
+
+    // editor
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "'FiraCode Nerd Font Mono', monospace",
+    "editor.fontLigatures": false,
+    "editor.fontWeight": "normal",
+    "editor.formatOnSave": true,
+    "editor.wordBasedSuggestions": false,
+
+    // formatters
+    "json.format.keepLines": true,
+
+    // git
+    "git.confirmSync": false,
+
+    // file explorer
+    "explorer.confirmDragAndDrop": false,
+
+    // misc
+    "workbench.startupEditor": "none",
+}
