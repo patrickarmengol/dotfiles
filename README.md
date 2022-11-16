@@ -4,7 +4,7 @@ Here lie my dotfiles.
 
 ## my setup
 
-- shell: alacritty
+- shell: bash
 - window manager: leftwm
 - bar: polybar
 - terminal emulator: alacritty
