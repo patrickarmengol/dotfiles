@@ -1,0 +1,126 @@
+{
+    "gtk-layer-shell": true,
+    "layer": "top",
+    "modules-left": [ "cpu", "memory", "temperature" ],
+    "modules-center": [ "wlr/workspaces" ],
+    "modules-right": [ "backlight", "pulseaudio", "network", "clock", "battery" ],
+    "height": 40,
+
+    "pulseaudio": {
+        "tooltip": false,
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "format-muted": " 婢 muted",
+        "format-icons": {
+            "headphone": "",
+            "default": [ "", "奔", "墳" ]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+
+    "wlr/workspaces": {
+        "sort-by-name": true,
+        "format": "{name}",
+        "on-click": "activate"
+    },
+
+    "hyprland/window": {
+        "format": "{}"
+    },
+
+    "network": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-alt": "{ipaddr} {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": {
+            "wifi": "",
+            "ethernet": "",
+            "disconnected": "睊",
+        },
+        /* "on-click": "alacritty -e nmtui", */
+    },
+
+    "backlight": {
+        "interval": 2,
+        "align": 0,
+        "rotate": 0,
+        "format": "{icon} {percent}%",
+        "format-icons": [ "", "", "", "" ],
+        "on-click": "",
+        "on-scroll-up": "light -A 5%",
+        "on-scroll-down": "light -U 5%",
+        "smooth-scrolling-threshold": 1,
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": [ "", "", "", "", "", "", "", "", "", "" ],
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "clock": {
+        "format": "{: %H:%M}",
+        "format-alt": "{: %Y-%m-%d  %H:%M:%S}"
+    },
+
+    "temperature": {
+        "interval": 5,
+        "tooltip": false,
+        "format": " {temperatureC}°C",
+        "max-length": 10,
+        "thermal-zone": 1,
+        "input-filename": "temp1_input",
+        "hwon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon4/temp1_i"
+    },
+
+    "cpu": {
+        "interval": 5,
+        "format": " {usage}%",
+        "max-length": 10
+    },
+
+    "memory": {
+        "interval": 10,
+        "format": " {}%",
+        "max-length": 10
+    },
+
+    "custom/media": {
+        "interval": 30,
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 20,
+        "format-icons": {
+            "spotify": " ",
+            "default": " "
+        },
+        "escape": true,
+        "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
+        "on-click": "playerctl play-pause"
+    },
+
+    "custom/launcher": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "tofi-drun",
+        "on-click-right": "killall tofi-drun"
+    },
+
+    "custom/power": {
+        "format": "襤",
+        /* "on-click": "wlogout -p layer-shell"*/
+    },
+}

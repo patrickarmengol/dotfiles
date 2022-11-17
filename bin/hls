@@ -1,0 +1,25 @@
+#!/bin/sh
+
+export PATH="${PATH}:${HOME}/bin"
+export EDITOR=nvim
+
+export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_SESSION_TYPE=wayland
+export XDG_SESSION_DESKTOP=Hyprland
+
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_QPA_PLATFORM="wayland;xcb"
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+export SDL_VIDEODRIVER=wayland
+export _JAVA_AWT_WM_NONEREPARENTING=1
+export CLUTTER_BACKEND=wayland
+export GDK_BACKEND="wayland,x11"
+
+export XCURSOR_SIZE=24
+
+export MOZ_ENABLE_WAYLAND=1
+export MOZ_DBUS_REMOTE=1
+
+exec Hyprland

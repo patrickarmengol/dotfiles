@@ -52,7 +52,10 @@ alias pc='ping -c 5 1.1.1.1'
 alias hg='history | grep'
 
 
-#---------------------------------------------------------
-
 # managing dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
+#---------------------------------------------------------
+
+export PATH="${PATH}:${HOME}/bin"
+
