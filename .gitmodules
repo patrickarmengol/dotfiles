@@ -1,3 +1,0 @@
-[submodule ".config/leftwm/themes/polycat"]
-	path = .config/leftwm/themes/polycat
-	url = git@github.com:patrickarmengol/leftwm-theme-polycat.git
