@@ -5,8 +5,8 @@ Here lie my dotfiles.
 ## my setup
 
 - shell: bash
-- window manager: leftwm
-- bar: polybar
+- window manager: hyprland
+- bar: waybar
 - terminal emulator: alacritty
 - audio: pipewire
 - network: nmcli
@@ -19,8 +19,8 @@ Here lie my dotfiles.
 - password manager: keepassxc
 - bittorrent: qbittorrent
 - images: feh
-- launcher: rofi
-- compositor: picom
+- wallpaper setter: hyprpaper
+- launcher: rofi (wayland fork)
 - pdf: zathura-mupdf
 - color theme: catppuccin-mocha
 
