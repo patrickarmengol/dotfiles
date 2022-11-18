@@ -10,7 +10,7 @@
         "tooltip": false,
         "scroll-step": 5,
         "format": "{icon} {volume}%",
-        "format-muted": " 婢 muted",
+        "format-muted": "婢 muted",
         "format-icons": {
             "headphone": "",
             "default": [ "", "奔", "墳" ]
@@ -30,9 +30,9 @@
 
     "network": {
         "tooltip": false,
-        "format": "{icon}",
-        "format-alt": "{ipaddr} {icon}",
-        "format-alt-click": "click-right",
+        "format": "{icon} {essid}",
+        "format-alt": "{icon} {essid} {ipaddr}",
+        /* "format-alt-click": "click-right", */
         "format-icons": {
             "wifi": "",
             "ethernet": "",
@@ -48,8 +48,8 @@
         "format": "{icon} {percent}%",
         "format-icons": [ "", "", "", "" ],
         "on-click": "",
-        "on-scroll-up": "light -A 5%",
-        "on-scroll-down": "light -U 5%",
+        "on-scroll-up": "brightnessctl s +5% -n 5%",
+        "on-scroll-down": "brightnessctl s 5%- -n 5%",
         "smooth-scrolling-threshold": 1,
     },
 
@@ -62,7 +62,7 @@
         "format": "{icon} {capacity}%",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
+        "format-alt": "{icon} {capacity}% {power}W",
         "format-icons": [ "", "", "", "", "", "", "", "", "", "" ],
     },
 
