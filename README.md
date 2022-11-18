@@ -1,12 +1,13 @@
 # dotfiles
 
-Here lie my dotfiles. 
+a small bowl of rice
 
 ## my setup
 
 - shell: bash
 - window manager: hyprland
 - bar: waybar
+- launcher: rofi (wayland fork)
 - terminal emulator: alacritty
 - audio: pipewire
 - network: nmcli
@@ -20,7 +21,6 @@ Here lie my dotfiles.
 - bittorrent: qbittorrent
 - images: feh
 - wallpaper setter: hyprpaper
-- launcher: rofi (wayland fork)
 - pdf: zathura-mupdf
 - color theme: catppuccin-mocha
 
@@ -39,7 +39,7 @@ dotfiles config --local status.showUntrackedFiles no
 ### usage
 
 ```bash
-dotfiles add <filepath>
+dotfiles add <filepath> # or `dotfiles add -u` for just staging changed files
 dotfiles commit -m "<message>"
 ```
 
@@ -54,15 +54,5 @@ rm README.md LICENSE
 dotfiles update-index --skip-worktree README.md LICENSE
 ```
 
-updating the readme
-
-```bash
-dotfiles update-index --no-skip-worktree README.md
-dotfiles checkout -- README.md
-...
-dotfiles add README.md
-dotfiles commit -m "update readme"
-rm README.md
-dotfiles update-index --skip-worktree README.md
-```
+updating the readme is now done through github
 
