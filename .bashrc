@@ -14,11 +14,11 @@ HISTTIMEFORMAT='%F %T '
 
 # listings
 alias ls='ls --color=auto'
-alias ll='ls -laF'
+alias ll='ls -la'
 alias la='ls -A'
 
 # better tree
-alias tree='tree --dirsfirst -F'
+alias tree='tree -C --dirsfirst'
 
 # list mounted drives
 alias mntd='mount | awk -F" " "{ printf \"%s\t%s\n\",\$1,\$3; }" | column -t | grep -E ^/dev/ | sort'
