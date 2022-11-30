@@ -55,6 +55,9 @@ alias hg='history | grep'
 # managing dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
+
+alias rf='sudo reflector --country KR --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+
 #---------------------------------------------------------
 
 
