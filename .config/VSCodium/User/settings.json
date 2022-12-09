@@ -23,6 +23,9 @@
 
     // formatters
     "json.format.keepLines": true,
+    "[toml]": {
+        "editor.formatOnSave": false,
+    },
 
     // git
     "git.confirmSync": false,
@@ -34,6 +37,14 @@
     "workbench.startupEditor": "none",
 
     // python
+    "python.analysis.typeCheckingMode": "strict",
     "python.formatting.provider": "autopep8",
     "python.formatting.autopep8Path": "/usr/bin/autopep8",
+    "python.formatting.autopep8Args": [
+        "--max-line-length=120"
+    ],
+    "ruff.args": [
+        "--max-line-length=120"
+    ],
+    "evenBetterToml.schema.enabled": false,
 }
