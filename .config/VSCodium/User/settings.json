@@ -38,7 +38,7 @@
 
     // python
     "python.analysis.typeCheckingMode": "strict",
-    "python.formatting.provider": "autopep8",
+    "python.formatting.provider": "black",
     "python.formatting.autopep8Path": "/usr/bin/autopep8",
     "python.formatting.autopep8Args": [
         "--max-line-length=120"
