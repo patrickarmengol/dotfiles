@@ -31,10 +31,10 @@ alias mkdir='mkdir -p -v'
 
 
 # python init venv
-alias vinit='python -m venv venv; source venv/bin/activate'
+alias vinit='python -m venv .venv; source .venv/bin/activate'
 
 # python activate venv
-alias va='source venv/bin/activate'
+alias va='source .venv/bin/activate'
 
 # python deactivate venv
 alias vd='deactivate'
