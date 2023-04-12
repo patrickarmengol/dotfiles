@@ -15,12 +15,6 @@ return {
   { import = "astrocommunity.pack.python" },
   {
     "linux-cultist/venv-selector.nvim",
-    opts = {
-      search_venv_managers = false,
-      search_workspace = true,
-      search = false,
-      name = { "venv", ".venv" },
-      parents = 0,
-    },
+    enabled = false,
   },
 }
