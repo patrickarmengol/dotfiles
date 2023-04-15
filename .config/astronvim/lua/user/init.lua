@@ -48,17 +48,24 @@ return {
     servers = {
       -- "pyright"
     },
-    config = {
+    settings = {
       ruff_lsp = {
-        settings = {
-          organizeImports = true,
-        },
-        -- on_attach = function(client, bufnr)
-        --   -- Disable hover in favor of Pyright
-        --   client.server_capabilities.hoverProvider = false
-        -- end,
+        organizeImports = true,
       },
     },
+    -- config = {
+    --   ruff_lsp = {
+    --     init_options = {
+    --       settings = {
+    --         organizeImports = true,
+    --       },
+    --     },
+    --     -- on_attach = function(client, bufnr)
+    --     --   -- Disable hover in favor of Pyright
+    --     --   client.server_capabilities.hoverProvider = false
+    --     -- end,
+    --   },
+    -- },
   },
   -- Configure require("lazy").setup() options
   lazy = {
