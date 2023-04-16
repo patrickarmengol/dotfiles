@@ -13,8 +13,4 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.lua" },
   -- { import = "astrocommunity.pack.python" },
-  {
-    "linux-cultist/venv-selector.nvim",
-    enabled = false,
-  },
 }
