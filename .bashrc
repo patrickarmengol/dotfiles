@@ -13,9 +13,8 @@ HISTTIMEFORMAT='%F %T '
 #---------------------------------------------------------
 
 # listings
-alias ls='ls --color=auto'
-alias ll='ls -la'
-alias la='ls -A'
+alias ls='exa'
+alias ll='exa -la'
 
 # better tree
 alias tree='tree -C --dirsfirst'
