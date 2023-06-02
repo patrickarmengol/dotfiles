@@ -43,8 +43,8 @@
     "python.formatting.autopep8Args": [
         "--max-line-length=120"
     ],
-    "ruff.args": [
-        "--max-line-length=120"
-    ],
     "evenBetterToml.schema.enabled": false,
+    "ruff.path": [
+        "/home/iu/.local/bin/ruff"
+    ],
 }
