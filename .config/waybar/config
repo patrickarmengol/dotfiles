@@ -10,10 +10,10 @@
         "tooltip": false,
         "scroll-step": 5,
         "format": "{icon} {volume}%",
-        "format-muted": "婢 muted",
+        "format-muted": "󰖁 muted",
         "format-icons": {
             "headphone": "",
-            "default": [ "", "奔", "墳" ]
+            "default": [ "", "󰖀", "󰕾" ]
         },
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     },
@@ -35,8 +35,8 @@
         /* "format-alt-click": "click-right", */
         "format-icons": {
             "wifi": "",
-            "ethernet": "",
-            "disconnected": "睊",
+            "ethernet": "󰈀",
+            "disconnected": "󰖪",
         },
         /* "on-click": "alacritty -e nmtui", */
     },
@@ -46,7 +46,7 @@
         "align": 0,
         "rotate": 0,
         "format": "{icon} {percent}%",
-        "format-icons": [ "", "", "", "" ],
+        "format-icons": [ "󰃞", "󰃝", "󰃟", "󰃠" ],
         "on-click": "",
         "on-scroll-up": "brightnessctl s +5% -n 5%",
         "on-scroll-down": "brightnessctl s 5%- -n 5%",
@@ -60,10 +60,10 @@
             "critical": 20
         },
         "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{icon} {capacity}% {power}W",
-        "format-icons": [ "", "", "", "", "", "", "", "", "", "" ],
+        "format-icons": [ "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
     },
 
     "tray": {
@@ -83,7 +83,7 @@
         "max-length": 10,
         "thermal-zone": 1,
         "input-filename": "temp1_input",
-        "hwon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon4/temp1_i"
+        "hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon4/temp1_i"
     },
 
     "cpu": {
