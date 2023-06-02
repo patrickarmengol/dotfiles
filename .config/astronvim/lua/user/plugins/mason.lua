@@ -1,5 +1,3 @@
-local utils = require "astrocommunity.utils"
-
 -- customize mason plugins
 return {
   -- use mason-lspconfig to configure LSP installations

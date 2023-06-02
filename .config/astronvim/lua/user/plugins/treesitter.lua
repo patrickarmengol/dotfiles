@@ -1,4 +1,3 @@
-local utils = require "astrocommunity.utils"
 return {
   "nvim-treesitter/nvim-treesitter",
   opts = function(_, opts)
