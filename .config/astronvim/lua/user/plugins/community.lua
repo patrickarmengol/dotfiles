@@ -12,6 +12,8 @@ return {
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.lua" },
-  -- { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.html-css" },
+
+  -- utility
   { import = "astrocommunity.motion.nvim-surround" },
 }
