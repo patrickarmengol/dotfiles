@@ -13,6 +13,8 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.html-css" },
+  { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.go" },
 
   -- utility
   { import = "astrocommunity.motion.nvim-surround" },
