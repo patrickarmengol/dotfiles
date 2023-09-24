@@ -22,6 +22,9 @@ return {
   },
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
+  { "rafamadriz/friendly-snippets", enabled = false },
+  { "L3MON4D3/LuaSnip", wants = false },
+  { "rcarriga/nvim-dap-ui", enabled = false },
   --
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   -- {
@@ -74,54 +77,54 @@ return {
   --     }, { mode = "n", prefix = "<leader>" })
   --   end,
   -- },
-  {
-    "rcarriga/nvim-dap-ui",
-    opts = {
-      layouts = {
-        {
-          elements = {
-            {
-              id = "scopes",
-              size = 0.25,
-            },
-            {
-              id = "breakpoints",
-              size = 0.25,
-            },
-            {
-              id = "stacks",
-              size = 0.25,
-            },
-            {
-              id = "watches",
-              size = 0.25,
-            },
-          },
-          position = "right",
-          size = 40,
-        },
-        {
-          elements = {
-            {
-              id = "repl",
-              size = 0.5,
-            },
-            {
-              id = "console",
-              size = 0.5,
-            },
-          },
-          position = "bottom",
-          size = 10,
-        },
-      },
-    },
-    config = function(_, opts)
-      local dap, dapui = require "dap", require "dapui"
-      dap.listeners.after.event_initialized["dapui_config"] = function() dapui.open { reset = true } end
-      dap.listeners.before.event_terminated["dapui_config"] = function() dapui.close() end
-      dap.listeners.before.event_exited["dapui_config"] = function() dapui.close() end
-      dapui.setup(opts)
-    end,
-  },
+  -- {
+  --   "rcarriga/nvim-dap-ui",
+  --   opts = {
+  --     layouts = {
+  --       {
+  --         elements = {
+  --           {
+  --             id = "scopes",
+  --             size = 0.25,
+  --           },
+  --           {
+  --             id = "breakpoints",
+  --             size = 0.25,
+  --           },
+  --           {
+  --             id = "stacks",
+  --             size = 0.25,
+  --           },
+  --           {
+  --             id = "watches",
+  --             size = 0.25,
+  --           },
+  --         },
+  --         position = "right",
+  --         size = 40,
+  --       },
+  --       {
+  --         elements = {
+  --           {
+  --             id = "repl",
+  --             size = 0.5,
+  --           },
+  --           {
+  --             id = "console",
+  --             size = 0.5,
+  --           },
+  --         },
+  --         position = "bottom",
+  --         size = 10,
+  --       },
+  --     },
+  --   },
+  --   config = function(_, opts)
+  --     local dap, dapui = require "dap", require "dapui"
+  --     dap.listeners.after.event_initialized["dapui_config"] = function() dapui.open { reset = true } end
+  --     dap.listeners.before.event_terminated["dapui_config"] = function() dapui.close() end
+  --     dap.listeners.before.event_exited["dapui_config"] = function() dapui.close() end
+  --     dapui.setup(opts)
+  --   end,
+  -- },
 }

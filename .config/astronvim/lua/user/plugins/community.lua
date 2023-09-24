@@ -14,8 +14,9 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.html-css" },
   -- { import = "astrocommunity.pack.typescript" },
-  { import = "astrocommunity.pack.vue" },
+  -- { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.go" },
+  { "ray-x/go.nvim", enabled = false },
 
   -- utility
   { import = "astrocommunity.motion.nvim-surround" },

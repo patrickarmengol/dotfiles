@@ -7,8 +7,17 @@ return {
   -- first key is the mode
   n = {
     -- second key is the lefthand side of the map
+    -- navigate buffer tabs with `H` and `L`
+    L = {
+      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+      desc = "Next buffer",
+    },
+    H = {
+      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      desc = "Previous buffer",
+    },
     -- mappings seen under group name "Buffer"
-    ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+    -- ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
         require("astronvim.utils.status").heirline.buffer_picker(
@@ -23,10 +32,21 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     -- code runner
-    ["<F8>"] = { "<cmd>TermExec cmd='python %'<cr>", desc = "run python file" },
+    -- ["<F8>"] = { "<cmd>TermExec cmd='python %'<cr>", desc = "run python file" },
+    -- quicker comment toggle
+    ["<C-_>"] = {
+      function() require("Comment.api").toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1) end,
+      desc = "Toggle comment line",
+    },
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+  },
+  v = {
+    ["<C-_>"] = {
+      "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
+      desc = "Toggle comment for selection",
+    },
   },
 }
