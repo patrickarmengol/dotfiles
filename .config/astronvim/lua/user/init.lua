@@ -33,7 +33,7 @@ return {
           -- "go",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
-          "html",
+          -- "html",
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
@@ -109,5 +109,11 @@ return {
       --     ["~/%.config/foo/.*"] = "fooscript",
       --   },
     }
+    vim.api.nvim_create_autocmd(
+      { "BufRead", "BufNewFile" },
+      { pattern = "*.go", callback = function() vim.bo.expandtab = false end }
+    )
+    -- vim.opt.list = true
+    -- vim.opt.listchars:append { tab = " " }
   end,
 }

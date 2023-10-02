@@ -8,8 +8,10 @@ return {
     signcolumn = "yes",
     foldcolumn = "0",
     wrap = false, -- sets vim.opt.wrap
-    tabstop = 4,
-    shiftwidth = 0,
+    tabstop = 4, -- width of a tab character
+    shiftwidth = 4, -- number of spaces for each level of indentation
+    softtabstop = 4, -- number of spaces for backspace/delete operations
+    expandtab = true, -- expands tabs to spaces (if set to true)
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
