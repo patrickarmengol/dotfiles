@@ -15,10 +15,10 @@
     "editor.fontFamily": "'FiraCode Nerd Font Mono', monospace",
     "editor.fontLigatures": false,
     "editor.fontWeight": "normal",
-    "editor.wordBasedSuggestions": false,
+    "editor.wordBasedSuggestions": "off",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-        "source.organizeImports": true
+        "source.organizeImports": "explicit"
     },
 
     // formatters
