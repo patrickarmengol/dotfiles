@@ -13,8 +13,8 @@ HISTTIMEFORMAT='%F %T '
 #---------------------------------------------------------
 
 # listings
-alias ls='exa'
-alias ll='exa -la'
+alias ls='eza'
+alias ll='eza -la'
 
 # better tree
 alias tree='tree -C --dirsfirst'
@@ -55,7 +55,7 @@ alias hg='history | grep'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 
-alias rf='sudo reflector --country KR --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias rf='sudo reflector --country TW --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 
 #---------------------------------------------------------
 
