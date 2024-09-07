@@ -55,8 +55,17 @@ alias hg='history | grep'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 
+
 alias rf='sudo reflector --country TW --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 
 #---------------------------------------------------------
 
-
+# shell wrapper for changing working directory when exiting yazi
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
