@@ -5,7 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+# PS1='[\u@\h \W]\$ '
+PS1='[\[\e[36m\]\u\[\e[0m\]@\[\e[32m\]\h\[\e[0m\] \[\e[33m\]\W\[\e[0m\]]\[\e[35m\]\\$\[\e[0m\] '
 
 HISTTIMEFORMAT='%F %T '
 
@@ -55,8 +56,16 @@ alias hg='history | grep'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 
-
+# update pacman mirrorlist
 alias rf='sudo reflector --country TW --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+
+
+# purge orphaned + cycledep packages
+alias purgeorphans='sudo pacman -Qdtq | sudo pacman -Rns -; sudo pacman -Qqd | sudo pacman -Rsu --print -'
+
+
+# clean pacman cache
+alias cleancache='sudo paccache -rk1; sudo paccache -ruk0'
 
 #---------------------------------------------------------
 
