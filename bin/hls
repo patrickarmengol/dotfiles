@@ -14,7 +14,7 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export SDL_VIDEODRIVER=wayland
 export _JAVA_AWT_WM_NONEREPARENTING=1
 export CLUTTER_BACKEND=wayland
-export GDK_BACKEND="wayland,x11"
+export GDK_BACKEND="wayland,x11,*"
 
 export XCURSOR_SIZE=24
 
