@@ -49,6 +49,15 @@ return {
         -- navigate buffer tabs
         ["<A-l>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["<A-h>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        ["<A-1>"] = { function() require("astrocore.buffer").nav_to(1) end, desc = "Go to tab 1" },
+        ["<A-2>"] = { function() require("astrocore.buffer").nav_to(2) end, desc = "Go to tab 2" },
+        ["<A-3>"] = { function() require("astrocore.buffer").nav_to(3) end, desc = "Go to tab 3" },
+        ["<A-4>"] = { function() require("astrocore.buffer").nav_to(4) end, desc = "Go to tab 4" },
+        ["<A-5>"] = { function() require("astrocore.buffer").nav_to(5) end, desc = "Go to tab 5" },
+        ["<A-6>"] = { function() require("astrocore.buffer").nav_to(6) end, desc = "Go to tab 6" },
+        ["<A-7>"] = { function() require("astrocore.buffer").nav_to(7) end, desc = "Go to tab 7" },
+        ["<A-8>"] = { function() require("astrocore.buffer").nav_to(8) end, desc = "Go to tab 8" },
+        ["<A-9>"] = { function() require("astrocore.buffer").nav_to(9) end, desc = "Go to tab 9" },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
