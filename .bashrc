@@ -23,9 +23,6 @@ alias tree='tree -C --dirsfirst'
 # list mounted drives
 alias mntd='mount | awk -F" " "{ printf \"%s\t%s\n\",\$1,\$3; }" | column -t | grep -E ^/dev/ | sort'
 
-# list largest files in working directory
-alias largest='du -h -x -s -- * | sort -r -h | head -20'
-
 # mkdir with make parent directories + verbose
 alias mkdir='mkdir -p -v'
 
@@ -38,10 +35,6 @@ alias va='source .venv/bin/activate'
 
 # python deactivate venv
 alias vd='deactivate'
-
-
-# nvim vim
-alias vim='nvim'
 
 
 # ping check
