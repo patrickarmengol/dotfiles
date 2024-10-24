@@ -12,16 +12,16 @@ a small bowl of rice
 - audio: pipewire
 - network: nmcli
 - browser: firefox
-- file manager: thunar and ranger
+- file manager: yazi and thunar
+- system monitor: bottom
 - video: mpv
-- ide: vscodium
 - text: astronvim
 - aur helper: paru
 - password manager: keepassxc
 - bittorrent: qbittorrent
-- images: feh
+- images imv
 - wallpaper setter: hyprpaper
-- pdf: zathura-mupdf
+- pdf: firefox
 - color theme: catppuccin-mocha
 
 ## managing dotfiles
