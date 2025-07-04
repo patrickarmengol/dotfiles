@@ -9,18 +9,15 @@ return {
   -- colorschemes
   { import = "astrocommunity.colorscheme.catppuccin" },
 
-
   -- data/markup languages
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.html-css" },
 
-
   -- programming languages
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.go" },
-  { "ray-x/go.nvim", enabled = false }, -- remove bloat from go pack
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.rust" },
 

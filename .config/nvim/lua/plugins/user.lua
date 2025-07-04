@@ -1,4 +1,5 @@
 -- You can also add or configure plugins by creating files in this `plugins/` folder
+-- PLEASE REMOVE THE EXAMPLES YOU HAVE NO INTEREST IN BEFORE ENABLING THIS FILE
 -- Here are some examples:
 
 ---@type LazySpec
@@ -12,59 +13,36 @@ return {
   --   event = "BufRead",
   --   config = function() require("lsp_signature").setup() end,
   -- },
-  --
+
   -- == Examples of Overriding Plugins ==
 
-  -- customize alpha options
+  -- customize dashboard options
   -- {
-  --   "goolord/alpha-nvim",
-  --   opts = function(_, opts)
-  --     -- customize the dashboard header
-  --     opts.section.header.val = {
-  --       " █████  ███████ ████████ ██████   ██████",
-  --       "██   ██ ██         ██    ██   ██ ██    ██",
-  --       "███████ ███████    ██    ██████  ██    ██",
-  --       "██   ██      ██    ██    ██   ██ ██    ██",
-  --       "██   ██ ███████    ██    ██   ██  ██████",
-  --       " ",
-  --       "    ███    ██ ██    ██ ██ ███    ███",
-  --       "    ████   ██ ██    ██ ██ ████  ████",
-  --       "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-  --       "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-  --       "    ██   ████   ████   ██ ██      ██",
-  --     }
-  --     return opts
-  --   end,
+  --   "folke/snacks.nvim",
+  --   opts = {
+  --     dashboard = {
+  --       preset = {
+  --         header = table.concat({
+  --           " █████  ███████ ████████ ██████   ██████ ",
+  --           "██   ██ ██         ██    ██   ██ ██    ██",
+  --           "███████ ███████    ██    ██████  ██    ██",
+  --           "██   ██      ██    ██    ██   ██ ██    ██",
+  --           "██   ██ ███████    ██    ██   ██  ██████ ",
+  --           "",
+  --           "███    ██ ██    ██ ██ ███    ███",
+  --           "████   ██ ██    ██ ██ ████  ████",
+  --           "██ ██  ██ ██    ██ ██ ██ ████ ██",
+  --           "██  ██ ██  ██  ██  ██ ██  ██  ██",
+  --           "██   ████   ████   ██ ██      ██",
+  --         }, "\n"),
+  --       },
+  --     },
+  --   },
   -- },
 
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
-  { "rafamadriz/friendly-snippets", enabled = false },
-  { "L3MON4D3/LuaSnip", wants = false },
   { "rcarriga/nvim-dap-ui", enabled = false },
-  {
-    "hrsh7th/nvim-cmp",
-    opts = function(_, opts)
-      local astrocore, astroui = require "astrocore", require "astroui"
-      local function truncate(str, len)
-        if not str then return end
-        local truncated = vim.fn.strcharpart(str, 0, len)
-        return truncated == str and str or truncated .. astroui.get_icon "Ellipsis"
-      end
-
-      if not opts.formatting then opts.formatting = {} end
-      opts.formatting.format = astrocore.patch_func(opts.formatting.format, function(format, ...)
-        -- get item from original formatting function
-        local vim_item = format(...)
-
-        -- truncate text fields to maximum of 25% of the window
-        vim_item.abbr = truncate(vim_item.abbr, math.floor(0.25 * vim.o.columns))
-        vim_item.menu = truncate(vim_item.menu, math.floor(0.25 * vim.o.columns))
-
-        return vim_item
-      end)
-    end,
-  },
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   -- {
@@ -106,4 +84,12 @@ return {
   --     )
   --   end,
   -- },
+  {
+    "Saghen/blink.cmp",
+    opts = {
+      completion = {
+        list = { selection = { preselect = false, auto_insert = false } },
+      },
+    },
+  },
 }
