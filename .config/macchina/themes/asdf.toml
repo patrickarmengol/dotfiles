@@ -1,0 +1,36 @@
+# asdf
+
+spacing = 2
+padding = 0
+hide_ascii = true
+separator = "-"
+key_color = "blue"
+separator_color = "magenta"
+
+[palette]
+type = "Dark"
+glyph = "●"
+spacing = 2
+visible = true
+
+[keys]
+host = "host"
+kerynel = "kernel"
+os = "os"
+machine = "machine"
+de = "de"
+wm = "wm"
+distro = "distro"
+terminal = "term"
+shell = "shell"
+packages = "packages"
+uptime = "uptime"
+local_ip = "local"
+memory = "mem"
+battery = "bat"
+backlight = "bright"
+resolution = "res"
+cpu = "cpu"
+cpu_load = "cpul"
+gpu = "gpu"
+disk_space = "storage"
