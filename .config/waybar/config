@@ -3,6 +3,7 @@
     "layer": "top",
     "modules-left": [
         "cpu",
+        "custom/gpu-usage",
         "memory",
         "temperature",
         "tray"
@@ -119,4 +120,11 @@
         "format": " {}%",
         "max-length": 10
     },
+    "custom/gpu-usage": {
+        "format": "{icon} {text}",
+        "exec": "gpu-usage-waybar",
+        "return-type": "json",
+        "format-icons": "󰾲",
+        "on-click": "alacritty -e nvtop",
+    }
 }
