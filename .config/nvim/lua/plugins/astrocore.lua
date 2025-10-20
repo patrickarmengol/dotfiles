@@ -43,6 +43,7 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
+        tabstop = 4,
         shiftwidth = 4, -- number of spaces for each level of indentation
         softtabstop = 4, -- number of spaces for backspace/delete operations
       },
