@@ -1,0 +1,77 @@
+[[keymaps]]
+command = "None"
+key_sequence = "g a"
+[[keymaps]]
+command = "None"
+key_sequence = "C-space"
+[[keymaps]]
+command = "ShowActionsOnSelectedItem"
+key_sequence = "A"
+[[keymaps]]
+command = "PlayRandom"
+key_sequence = "r"
+[[keymaps]]
+command = "None"
+key_sequence = "g space"
+[[keymaps]]
+command = "CurrentlyPlayingContextPage"
+key_sequence = "b c"
+[[keymaps]]
+command = "None"
+key_sequence = "g t"
+[[keymaps]]
+command = "TopTrackPage"
+key_sequence = "b t"
+[[keymaps]]
+command = "None"
+key_sequence = "g r"
+[[keymaps]]
+command = "RecentlyPlayedTrackPage"
+key_sequence = "b r"
+[[keymaps]]
+command = "None"
+key_sequence = "g y"
+[[keymaps]]
+command = "LikedTrackPage"
+key_sequence = "b y"
+[[keymaps]]
+command = "None"
+key_sequence = "g L"
+[[keymaps]]
+command = "LyricsPage"
+key_sequence = "b w"
+[[keymaps]]
+command = "None"
+key_sequence = "g l"
+[[keymaps]]
+command = "LibraryPage"
+key_sequence = "b l"
+[[keymaps]]
+command = "None"
+key_sequence = "g s"
+[[keymaps]]
+command = "SearchPage"
+key_sequence = "b s"
+[[keymaps]]
+command = "None"
+key_sequence = "g b"
+[[keymaps]]
+command = "BrowsePage"
+key_sequence = "b b"
+[[keymaps]]
+command = "None"
+key_sequence = "b"
+[[keymaps]]
+command = "ChooseSelected"
+key_sequence = "l"
+[[keymaps]]
+command = "PreviousPage"
+key_sequence = "h"
+[[actions]]
+action = "ToggleLiked"
+key_sequence = "y"
+target = "PlayingTrack"
+[[actions]]
+action = "ToggleLiked"
+key_sequence = "Y"
+target = "SelectedItem"
