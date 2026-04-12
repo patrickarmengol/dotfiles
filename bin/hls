@@ -28,4 +28,4 @@ export XMODIFIERS=@im=fcitx
 export SDL_IM_MODULE=fcitx
 export ANKI_WAYLAND=1
 
-exec Hyprland
+exec start-hyprland
