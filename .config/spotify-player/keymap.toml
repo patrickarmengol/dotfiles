@@ -60,7 +60,7 @@ command = "BrowsePage"
 key_sequence = "b b"
 [[keymaps]]
 command = "None"
-key_sequence = "b"
+key_sequence = "g"
 [[keymaps]]
 command = "ChooseSelected"
 key_sequence = "l"
