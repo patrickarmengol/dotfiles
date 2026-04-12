@@ -2,11 +2,8 @@
 command = "None"
 key_sequence = "g a"
 [[keymaps]]
-command = "None"
-key_sequence = "C-space"
-[[keymaps]]
 command = "ShowActionsOnSelectedItem"
-key_sequence = "A"
+key_sequence = "C-a"
 [[keymaps]]
 command = "PlayRandom"
 key_sequence = "r"
@@ -73,5 +70,5 @@ key_sequence = "y"
 target = "PlayingTrack"
 [[actions]]
 action = "ToggleLiked"
-key_sequence = "Y"
+key_sequence = "C-y"
 target = "SelectedItem"
