@@ -1061,6 +1061,10 @@ vim.pack.add({ "https://github.com/folke/todo-comments.nvim" }, { confirm = fals
 
 require("todo-comments").setup({})
 
+-- git-signs
+
+vim.pack.add({ "https://github.com/lewis6991/gitsigns.nvim" }, { confirm = false })
+
 -- which-key
 
 vim.pack.add({ "https://github.com/folke/which-key.nvim" }, { confirm = false })
