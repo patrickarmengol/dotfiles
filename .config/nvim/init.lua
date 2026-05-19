@@ -57,7 +57,7 @@ vim.o.shiftwidth = 4 -- amount to indent with << or >>
 vim.o.tabstop = 4 -- how many spaces are shown per tab
 vim.o.softtabstop = 4 -- how many spaces are applied when pressing tab
 vim.o.smarttab = true
-vim.o.smartindent = false -- defer to treesitter indent
+vim.o.smartindent = true -- defer to treesitter indent
 vim.o.autoindent = true -- keep indentation from previous line
 
 -- min num of lines above/below cursor on scroll
@@ -480,7 +480,7 @@ vim.api.nvim_create_autocmd("FileType", {
     callback = function(ev)
         -- vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
         -- vim.wo[0][0].foldmethod = "expr"
-        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        -- vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
         vim.treesitter.start(ev.buf)
     end,
 })
